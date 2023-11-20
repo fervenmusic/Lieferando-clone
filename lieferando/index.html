@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>needfood</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icons/favicon.ico" type="image/icon type">
+
+</head>
+
+<body onload="render()">
+
+    <header>
+        <div class="headerclass">
+            <h2>needfood</h2>
+            <span>Speisekarte</span>
+            <div class="header-icons">
+                <img src="icons/germany.png">
+                <img src="icons/more.svg">
+            </div>
+        </div>
+    </header>
+
+    <div class="everything">
+
+        <div class="content" id="content">
+
+            <div class="main-image">
+                <img src="img/pizza.jpg" alt="pizza">
+                <div class="logo-wrapper">
+                    <img src="img/logo.jpg" alt="company-logo" class="company-logo">
+                </div>
+            </div>
+
+
+            <div class="content-main">
+                <div class="company">
+                    <div>
+                        <h2>City-Pizza</h2>
+                    </div>
+                    <div class="padding">
+                        <img src="icons/star.svg" class="content-icons">
+                        <img src="icons/star.svg" class="content-icons">
+                        <img src="icons/star.svg" class="content-icons">
+                        <img src="icons/star.svg" class="content-icons">
+                        <img src="icons/star.svg" class="content-icons">
+                        <span>1.5k Bewertungen</span>
+                    </div>
+
+                    <div class="align padding">
+                        <div class="padding-right">
+                            <img src="icons/clock.svg" class="content-icons">
+                            <span>Lieferung in 20-45min</span>
+                        </div>
+                        <img src="icons/dot.svg" class="content-icons">
+                        <div class="align padding-left gap padding-right">
+                            <img src="icons/bicycle.svg" class="content-icons">
+                            <span>3,95€</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="categories">
+                    <img src="icons/search.svg" class="content-icons">
+                    <a href="#Pizza">
+                        <span>
+                            Pizza
+                        </span>
+                    </a>
+                    <a href="#Rolls">
+                        <span>
+                            Rolls
+                        </span>
+                    </a>
+                    <a href="#Salat">
+                        <span>
+                            Salat
+                        </span>
+                    </a>
+                    <a href="#Snacks">
+                        <span>
+                            Snacks
+                        </span>
+                    </a>
+                    <a href="#Dessert">
+                        <span>
+                            Dessert
+                        </span>
+                    </a>
+                </div>
+
+                <div id="content-menu" class="content-menu">
+                    <div id="headline">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="basket" id="switchMobile">
+            <div class="basket-container" id="basket-cont2">
+                <div class="exitbuttondiv">
+                    <h2>Warenkorb</h2>
+                    <img src="icons/exitbutton.svg" alt="exitbutton" class="exitbutton" onclick="backToMainPage()">
+                </div>
+                <div class="fillBasket" id="fillBasket">
+                    <img src="icons/bag.svg" class="fillBasketIcon">
+                    <h2>Fülle deinen Warenkorb</h2>
+                    <span>Füge einige leckere Gerichte aus der Speisekarte hinzu und bestelle dein Essen</span>
+                </div>
+                <div id="side-basket" class="side-basket hide">
+                    <div id="basket" class="basket-menu">
+
+                    </div>
+                    <div id="basket-sums" class="basket-sums">
+                        <div class="flex">
+                            <p>Zwischensumme</p><span id="subtotal"></span>
+                        </div>
+                        <div class="flex">
+                            <p>Lieferkosten</p><span id="delivery-cost"></span>
+                        </div>
+                        <div class="flex">
+                            <h3>Gesamt</h3><b>
+                                <h3 id="sum"></h3>
+                            </b>
+                        </div>
+
+                        <div class="pay-button" onclick="popupPay()">
+                            <h3 id="pay-button"></h3>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popupPay hide" id="popupPay">
+        <div class="popup-content">
+            <h2>Danke für deine Bestellung!</h2>
+            <img src="gif/loading.gif" class="loading-gif">
+            <div class="basket-gif-cont">
+                <img src="gif/basket.gif" class="basket-gif">
+            </div>
+        </div>
+    </div>
+
+    <div class="align-mid">
+        <div class="pay-button-mobile hide" onclick="openBasket()" id="mobilePayButton">
+            <h3 id="pay-button-mobile"></h3>
+        </div>
+    </div>
+
+    <footer class="footer" id="footerCont">
+
+        <div class="footer-cont1">
+            <span>©️ 2023 needfood</span>
+        </div>
+
+        <div class="footer-cont2">
+            <div class="datenschutz-etc">
+                <a href="impressum.html">Impressum</a>
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+</html>
